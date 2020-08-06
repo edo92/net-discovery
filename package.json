@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@edo92/netdiscovery",
+  "author": "edo92",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edo92/net-discovery"
+  },
+  "keywords": [
+    "network",
+    "discover networks",
+    "local networks",
+    "local devices",
+    "same network devices"
+  ],
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": "14.7.0"
+  },
+  "browser": {
+    "child_process": false
+  },
+  "scripts": {
+    "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "build": "npx webpack -w"
+  },
+  "peerDependencies": {},
+  "husky": {},
+  "module": "dist/netdiscovery.esm.js",
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "husky": "^4.2.5",
+    "nodemon": "^2.0.4",
+    "ts-loader": "^8.0.2",
+    "ts-node": "^8.10.2",
+    "tsdx": "^0.13.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.0"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.9",
+    "ip": "^1.1.5",
+    "mz": "^2.7.0"
+  }
+}

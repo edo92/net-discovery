@@ -1,2 +1,9 @@
-# net-discovery
-Discover devices on the same network
+# Usage
+
+```js
+import net from 'netdiscovery';
+
+net.discover().then((res: any) => {
+    console.log('testing', res);
+})
+```
