@@ -1,2 +1,5 @@
-const test = require('../dist/index');
-console.log('test', test)
+const net = require('../dist');
+
+net.discover().then((res) => {
+    console.log(res);
+})

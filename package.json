@@ -33,13 +33,15 @@
     "dev": "nodemon -e ts -w ./src -x ts-node src/index.ts",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "build": "npx webpack -w"
+    "build": "npx webpack -w",
+    "go": "cd example && node index.js"
   },
   "peerDependencies": {},
   "husky": {},
   "module": "dist/netdiscovery.esm.js",
   "devDependencies": {
     "@types/node": "^14.0.27",
+    "@types/jest": "^26.0.9",
     "husky": "^4.2.5",
     "nodemon": "^2.0.4",
     "ts-loader": "^8.0.2",
@@ -52,7 +54,6 @@
     "webpack-node-externals": "^2.5.0"
   },
   "dependencies": {
-    "@types/jest": "^26.0.9",
     "ip": "^1.1.5",
     "mz": "^2.7.0"
   }

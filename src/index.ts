@@ -11,9 +11,11 @@ class Network
     private PORT: number = 80;
     private networks: string[] = util.getNetlist();
 
-    public discover = () => 
+    public discover = async (callback?: any) => 
     {
-        return this.pingServers().then(this.arpAll);
+        const results = await this.pingServers().then(this.arpAll);
+        callback && callback(results);
+        return results;
     }
 
     private arpAll = (): string[] => 
